@@ -1,0 +1,109 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+/*轮播图css*/
+body{
+    font-family:"Gotham", Arial, sans-serif ;
+}
+#div1 {width:900px; height:500px; margin:50px auto; overflow: hidden; position:relative;}
+#div1 ul{position: absolute;left: 0;top: 0;}
+#div1 ul li{height:500px;float: left;}
+
+#div1 ol {position:absolute;right: 10%;bottom: 10px;z-index:6;left: 45%;}
+#div1 ol li{width: 10px;height: 10px;background: #fff;margin-left: 5px;float: left;line-height: 20px;text-align: center;cursor: pointer;border-radius: 50%;margin: 0 10px;}
+#div1 ol li.ac{background: #656f78;color: #fff;font-weight: 600;width: 15px;height: 15px;}
+#div1>a{text-decoration: none;position: absolute;top: 50%;margin-top: -10px;height: 40px;line-height: 32px;text-align: center;width: 40px;font-size: 40px;vertical-align: middle;color: #fff;background: rgba(0,0,0,0.5);z-index:6;}
+#goPrev{left: 0;}
+#goNext{right: 0;}
+#div1 img{width:900px; height:500px;}
+
+
+//bodycss手袋
+body{
+    font-family:"Gotham", Arial, sans-serif ;
+}
+#interduce{
+    width: 100%;
+    
+    
+}
+#interduce .ac1{
+    color: #787878;
+    margin: 0 auto;
+    width: 1260px;
+    background: url(../static/images/fgx.png) no-repeat 190px bottom;
+    font-weight: 100;   
+    letter-spacing: 8px;
+    margin-bottom: 70px;
+    
+}
+banner{
+    height: 713px;
+    width: 100%;
+}
+banner img{
+    margin-top: 90px;
+    width: 100%; 
+  
+}
+#interduce .ac2{
+    color: #787878;
+    margin: 0 auto;
+    width: 1260px;
+    background: url(../static/images/fgx.png) no-repeat 60px bottom;
+    font-weight: 100;   
+    letter-spacing: 8px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+
+
+    
+}
+#interduce .ac3{
+    color: #787878;
+    margin: 0 auto;
+    width: 1260px;
+    background: url(../static/images/fgx.png) no-repeat 157px bottom;
+    font-weight: 100;       
+    letter-spacing: 8px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+#sd{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#sd{
+    line-height: 50px;
+}
+#sd dl{
+    padding-left:20px ;
+}
+#sd dt{
+    font-size: 24px;
+}
+#sd p{
+    font-size:14px ;
+}
+#sd .search{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    width: 72px;
+    height: 30px;
+    background: black;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+
+#furla{
+    font-weight: 600;
+}
+
+

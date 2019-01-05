@@ -1,0 +1,160 @@
+/*footer*/
+
+footer{
+    box-sizing: border-box;
+    margin-top: 50px;
+    height: 768px;
+    width: 100%;
+    background: #ededed;
+}
+
+footer .partone{
+    box-sizing: border-box;
+    height: 200px;
+    background: #616161;
+    text-align: center;
+    padding: 50px 15px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+.partone .social dl dt{
+    margin-bottom: 18px;
+}
+.partone .social dl dd a i{
+    color: white;
+    font-size: 31px;
+    padding:0 8px;
+    }
+.partone .news{
+    float: left;
+    width: 30%;
+    
+}
+.partone #pos{
+    display: flex;
+}
+.partone #pos a{
+    display: inline-block;
+    width: 100px;
+    height:35px;
+    background: #f5f5f5;
+    color: #7b7b7b;
+    line-height: 35px;
+    
+}
+.partone #pos a:hover{
+    background: #484848;
+    color: white;
+}
+.partone .news p{
+    margin-bottom: 18px;
+}
+.partone .news a{
+    display: inline-block;
+}
+#newsearch{
+    width: 380px;
+    height: 35px;
+    border: none;
+}
+.partone .fun{
+    width: 30%;
+    
+}
+.partone .fun dt{
+    margin-bottom: 18px;
+}
+.partone .fun dt a:hover{
+    text-decoration: underline;
+}
+.partone .social{
+    width: 30%;
+}
+
+
+footer .parttow{
+    background: #a0a0a0;
+    height: 100px;  
+  
+}
+
+footer .partthree{
+    background: #ededed;
+    height: 380px;  
+    display: flex;
+    justify-content: space-around;
+    color: #616161;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-size: 13px;
+    margin: 0 70px;
+    
+}
+footer .partthree dt{
+    margin-top: 80px;
+        display: block;
+    color: #616161;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+footer .partthree dd{
+       padding: 3px 0;
+       text-align: center;
+}
+footer .partthree dd a{
+ 
+    color: #616161;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-size: 13px;
+
+}
+footer .partthree dd a:hover{
+    text-decoration: underline;
+}
+footer .partfour{
+    height: 90px;
+    background: white;
+        font-size: 13px;
+    color: #616161;
+    text-align: center;
+    padding-top: 15px;
+    line-height: 50px;
+}
+footer .partfour p:nth-child(3){
+    background: url(/static/images/lz2.jpg) no-repeat 520px center;
+    height: 70px;
+    font-size: 15px;
+    color: #7B6B43;
+}
+//复选框样式
+.parttow span{
+    font-family: Gotham,Arial,sans-serif;
+    font-size: 9px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #000000 !important;
+    text-align: left;
+}
+.parttow input{
+    border: solid 1px #000000;
+     width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-right: 17px;
+    padding-top: 3px;
+    border: none;
+    
+}
+
+//link

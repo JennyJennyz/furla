@@ -1,0 +1,101 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+*{margin: 0;padding: 0;}
+body {
+    font-size: .875rem;
+    letter-spacing: 0.02rem;
+}
+body{
+    
+    font-family: "Gotham",sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+main h2{    
+    padding-top: 150px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 63px;
+    margin-top: 10px;
+}
+#formcontent{
+    margin-top: 30px;
+    color: #7b6b43;
+    display: flex;  
+    flex-flow: column;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+form input{
+    border: 1px solid #7b6b43;
+    height: 40px;
+    width:300px ;
+    margin: 20px; 
+}
+
+#formcontent span{
+    text-align: right;
+}
+
+#submit{
+    width: 300px;
+    height: 40px;
+    background: #7b6b43;
+    border:none;
+    color: white;   
+}
+.checkbox{
+    width: 18px;
+    height: 18px;
+    border: none;
+    
+}
+#tel{
+    width: 200px;
+}
+.phone{
+    display: flex;
+    width: 500px;
+    height: 40px;
+    border: 1px solid red;
+    
+}
+.phone a{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    color: white;
+    background:#bdb5a1 ;
+    }
+
+.gologin a{
+    font-weight: 600;
+    color: #7b6b43;
+}
+.gologin{
+    margin-bottom: 20px;
+}
+#div{
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+}
+#remember{
+    width: 18px;
+    height: 18px;
+}
+#div .goregister{
+     margin-bottom: 20px;
+}
+#div .goregister a{
+    font-weight: 600;
+    color: #7b6b43;
+}
