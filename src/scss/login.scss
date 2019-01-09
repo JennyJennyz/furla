@@ -2,10 +2,93 @@
 @import "./component/header.scss";
 @import "./component/footer.scss";
 
+
+h2{
+    padding-top: 170px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 63px;
+    font-size: 2rem;
+}
+.logincontent{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+.new-user{
+    margin-top: 20px;
+    margin-right: 140px;
+    height: 364px;
+    width: 327px;
+}
 #div{
-    overflow: hidden;
-    margin-top: 150px;
+    margin-top: 20px;
+    margin-left: 140px;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    color: #7b6b43;
+    display: flex;  
+    flex-flow: column;
+    align-content: center;
+    input{
+        width: 300px;
+        height: 35px;
+        margin: 10px 0px;
+        border: 1px solid #7b6b43;
+    }
+    #login-submit{
+        margin-top: 20px;
+         width: 300px;
+        height: 40px;
+        border: none;
+        background: #7b6b43;
+        color: white;
+    }
+    #remember{
+        margin-top: 10px;
+        width: 18px;
+        height: 18px;
+    }
+}
+#div p:nth-child(1){
+     text-transform: uppercase !important;
+     letter-spacing: 2px;
+     font-size: 1.7rem;
+     font-weight: 300;
+      margin-bottom: .9375rem;
+      text-rendering: optimizeLegibility;
+      font-family: "Gotham",sans-serif;
+      color: #333;
+      -webkit-font-smoothing: antialiased;
+
+}
+#div p:nth-child(2){
+     font-weight: 300;
+      margin-bottom: .9375rem;
+      text-rendering: optimizeLegibility;
+      color: #7b6b43;
+      -webkit-font-smoothing: antialiased;
+
+}
+body{
+    
+    font-family: "Gotham",sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+#createuser{
+    display: inline-block;
+    margin-top: 20px;
+     width: 300px;
+    height: 40px;
+    border: none;
+    background: #7b6b43;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
 }

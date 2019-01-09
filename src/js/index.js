@@ -18,7 +18,7 @@ $(function(){
 	let btns = [];
 
 	//拼接按钮
-	for (var i = 1; i <= len; i++) {
+	for (var i = 1; i <= len; i++){
 		btns.push($("<li>").addClass(i===1?"ac":"").appendTo($("#div1 ol")));
 	}
 
@@ -53,6 +53,7 @@ $(function(){
 
 	//下一张
 	$("#goNext").on("click", function(){
+		console.log(3);
 		btns[index].removeClass("ac");
 		if(++index >= len){
 			//移动到追加得那一张，但是移动完成之后瞬间回到第0张
@@ -66,13 +67,31 @@ $(function(){
 
 		btns[index].addClass("ac");
 	})
+//自动轮播
 
-
-	div1.onmouseleave = (function autoPlay(){
-		div1.timer = setInterval(goNext.onclick, 2000);
+	$("#div1").hover(function(){
+		clearInterval(timer);
+	}, (function autoPlay(){
+		timer = setInterval(() => {
+			btns[index].removeClass("ac");
+				if(++index >= len){
+				//移动到追加得那一张，但是移动完成之后瞬间回到第0张
+				$ul.stop().animate({left: -len*liWidth}, "slow", function(){
+					$ul.css({left: 0});
+				})
+				index = 0;
+			}else{
+				$ul.stop().animate({left: -index*liWidth});
+			}
+	
+			btns[index].addClass("ac");
+		},2000);
 		return autoPlay;
-	})();
-	div1.onmouseenter = function(){
-		clearInterval(div1.timer);
-	}
+	})());
+
+
+
+
+//结束部分
 })
+

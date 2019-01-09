@@ -5,6 +5,7 @@ header{
     background: white;
     z-index: 10;
     position: fixed;
+    top: 0px;
     }
 .ac{        
         position: fixed;
@@ -119,29 +120,86 @@ content{
 }
 
 //选项卡
-.tab{
-    z-index: 999;
-    height: 500px;
-}
+
 .woman-list{
     width: 100%;
-    height: 300px;
+    height: 238px;
     display: none;
-    background: red;
     position: absolute;
     left: 0px;
     top: 138px;
     }
 .furla-world{
     width: 100%;
-    height: 100px;
+    height: 60px;
     display: none;
-    background: blue;
     position: absolute;
     left: 0px;
     top: 138px;
+    ul{
+        width: 100%;
+        padding-top:20px ;
+        display: flex; 
+        justify-content: space-around;
+        a{
+                font-weight: bold;
+                 font-size: 12px;
+        }
+    }
     }
 
 .navshow{
     display:block;
     }
+    
+.stay{
+    background: #f5f5f5;
+}
+
+.woman-list{
+// padding-top: 20px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    top: 0px;
+    .img{
+        position: absolute;
+        top:20px;
+        left: 290px;
+        img{
+        display: inline-block;
+        width: 290px;
+        height: 189px;
+         float: left;
+    }
+    }
+    .listB{float: left;
+            position: absolute;
+            top:20px;
+            left: 795px;
+            line-height: 1.7;
+        a{    
+        cursor: pointer;
+        letter-spacing: 0.02em;
+        color: #333;
+        font-weight: bold;
+        font-size: 12px;
+        
+        }
+    }
+    .listA{float: left;
+         position: absolute;
+         top:20px;
+         left: 597px;
+         line-height: 1.7;
+        a{    
+        cursor: pointer;
+        letter-spacing: 0.02em;
+        color: #333;
+        font-weight: bold;
+        font-size: 12px;
+         }
+        }
+   
+}
+#totop{cursor: pointer;display: none;position: fixed;bottom: 20px;right: 20px;width: 40px;height: 40px;background: #ccc;border-radius: 50%;color: #fff;font-size: 28px;font-weight: 900;text-align: center;line-height: 40px;}

@@ -31,6 +31,7 @@ main h2{
     align-items: flex-end;
     align-content: center;
     justify-content: flex-end;
+ 
 }
 
 form input{
@@ -38,13 +39,27 @@ form input{
     height: 40px;
     width:300px ;
     margin: 20px; 
+    box-sizing: border-box;
+    padding: 10px;
+       
+    
+    
 }
 
 #formcontent span{
     text-align: right;
+    color: red;
+    font-size: 12px;
+    display: none;
+    
+}
+.warnningshow{
+    display: block !important;
+    
+
 }
 
-#submit{
+#zc{
     width: 300px;
     height: 40px;
     background: #7b6b43;
@@ -80,6 +95,7 @@ form input{
     color: #7b6b43;
 }
 .gologin{
+    color: #7b6b43;
     margin-bottom: 20px;
 }
 #div{

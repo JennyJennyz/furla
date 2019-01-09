@@ -4,9 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/register.css">
+		<link rel="stylesheet" type="text/css" href="/css/register.css">
 		<link rel="stylesheet" type="text/css" href="/libs/font/iconfont.css" />
-		<script type="text/javascript" src="/libs/jquery/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="/libs/require/require.js" data-main="/js/register.js"></script>
 	</head>
 
@@ -20,11 +19,12 @@
 				<div id="formcontent">
 
 					<label>username: <input type="text" name="username" id="username" class="inp" placeholder="请输入用户名" /></label>
-
+					<span class="username-wranning">*请填写正确的用户名</span>
 					<label>password: <input type="text" name="password" id="password" class="inp" placeholder="请输入密码"/></label>
-
+					<span class="password-wranning">*请填写正确的密码</span>
 					<label>email: <input type="email" name="email" id="email" class="inp" placeholder="请输入电子邮箱"/></label>
-					<!--<div class="phone">
+					<span class="email-wranning">*请填写正确的邮箱地址</span>
+				<!--<div class="phone">
 						<label>phone: <input type="tel" name="tel" id="tel" class="inp" placeholder="请输入电话号码"/></label>
 						<a href="javascript:;">发短信</a>
 					</div>-->
@@ -32,7 +32,7 @@
 					<label><input type="checkbox" name="" class="checkbox" value=""/>请将我添加到 FURLA 的电子邮件列表。
 </label>
 					<span class="gologin">已有账号，<a href="login.html" target="_blank">去登陆</a></span>
-					<button id="submit" title="清除默认事件">提交注册</button>
+					<button id="zc">提交注册</button>
 				</div>
 
 			</form>

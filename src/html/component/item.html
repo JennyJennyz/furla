@@ -1,0 +1,16 @@
+<!--导入到list.html里面的模块-->
+<ul>
+	
+	<script type="text/html" id="list-template">
+		{{each list item i}}
+		<li>
+			<div class="img">
+				<a href="/html/detail.html?id={{item.id}}"><img src="{{item.img}}"/></a>
+			</div>	
+				<p class="title"><span class="item-sapn">FURLA METROPOLIS</span></br>{{item.title}}</p>
+				<p class="price">￥{{item.price}}</p>
+			
+		</li>
+		{{/each}}
+	</script>
+</ul>

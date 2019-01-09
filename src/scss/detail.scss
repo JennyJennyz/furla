@@ -1,3 +1,164 @@
 @import "./component/style.scss";
 @import "./component/header.scss";
 @import "./component/footer.scss";
+
+
+main{
+    margin-top: 150px;
+}
+.detail-title{
+    color: #cdc3c0;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.detail-information{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.detail-img{
+    img{
+        width: 500px;
+        height: 500px;
+    }
+}
+.detail-content{
+    width: 400px;
+     line-height: 2;   
+    h3{
+        letter-spacing: 3px;
+    }
+    p{
+        font-weight: 300;
+       
+    }
+    #price{
+     font-family: "Gotham",sans-serif;
+    font-weight: 300;
+    font-size: 27px;
+    color: #988c6d;
+    }
+    
+}
+
+.size{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    dl{
+        height: 111px;
+        
+        
+        
+         dt{
+        font-weight: 600;
+        font-size: 14px;
+    }
+     dd{
+        font-size: 13px;
+    }
+    }
+    
+    
+    
+   
+}
+
+.addshopcar{
+    background: #7B6B43;
+    color: white;
+    border: none;
+    width: 400px;
+    height: 40px;
+}
+
+
+.detail-socail{
+    margin-top: 30px;
+    i{
+        font-size: 22px;
+        color:#7B6B43 ;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+#mybag-detail{
+    margin-top: 60px;
+    width: 100%;
+    font-family: "Gotham",sans-serif;
+
+    h3{
+        text-align: center;
+        font-weight: normal;
+        
+    }
+    .detail-ul{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 2;
+        }
+}
+.b{
+    font-weight: 600;
+    font-size: .875rem;
+    letter-spacing: 2px;
+}
+.i{
+    font-weight: 300;
+    line-height: 1.5;
+    color: #a0a0a0;
+    -webkit-font-smoothing: antialiased;
+}
+.listone{
+    margin-left: 60px;
+}
+
+//护理须知
+.protect{
+    margin-top: 50px;
+    height: 250px;
+    width: 100%;
+    background: #f1f1f1;
+    box-sizing: border-box;
+    p{
+        text-align: center;
+        padding-top:30px ;
+        padding-bottom: 10px;
+        font-family: "Gotham",sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        font-size: 14px;
+        
+    }
+}
+
+
+#tw{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    
+    dl{
+        width:120px;
+    }
+    dd{
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+   
+}

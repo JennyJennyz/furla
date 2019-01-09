@@ -68,6 +68,12 @@ footer .partone{
 }
 .partone .fun dt{
     margin-bottom: 18px;
+    a{
+        color: white;
+        font-family: Gotham,sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+    }
 }
 .partone .fun dt a:hover{
     text-decoration: underline;
@@ -150,7 +156,7 @@ footer .partfour p:nth-child(3){
      width: 15px;
     height: 15px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-right: 17px;
     padding-top: 3px;
     border: none;

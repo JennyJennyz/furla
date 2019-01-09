@@ -1,47 +1,109 @@
 //首页的业务逻辑
 require(["./requirejs.config"], () => {
 	//引入index需要依赖的模块
-require(["jquery", "header","footer"], () => {
-
+require(["jquery","url", "header","footer","cookie"], ($,url) => {
+			
+	$(function(){
+				
+				console.log("2456")
+				
+				var flagA = false;
+				var flagB = false;	
+				var flagC = false;	
+				var flagD = false;	
+		$("#username").on("blur",function(){
+					
+					let nameReg = /^\w+$/;
+					let username = $("#username").val();
+						if(!(nameReg.test(username))){
+						
+							$(".username-wranning").addClass("warnningshow");	
+							flagA = false;
+						}else{
+							flagA = true;
+							$(".username-wranning").css({display:"none"});
+						}
+				})
+				//验证密码
+		$("#password").on("blur",function(){
+						let pwd = $("#password").val();
+						let pwdReg = /^.{6,}$/;
+						
+						if(!(pwdReg.test(pwd))){
+							$(".password-wranning").addClass("warnningshow");	
+							flagB = false;
+						}else{
+							flagB = true;
+							$(".password-wranning").css({display:"none"});
+						}
+				})
+				
+				//邮件
+		$("#email").on("blur",function(){
+						let email = $("#email").val();
+						let emailReg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+						
+						if(!(emailReg.test(email))){
+							$(".email-wranning").addClass("warnningshow");	
+							flagC = false;
+						}else{
+							flagC = true;
+							$(".email-wranning").css({display:"none"});
+						}
+				})
+				//复选框
+//				if($(".checkbox").cheked){
+//					flagD = true;
+//				}else{
+//					flagD = false;
+//				}
+				
+				
+				//提交事件
+				$("#zc").on("click" , function(e){
+				//判断是否注册成功
+				e.preventDefault();
+				
+				$.ajax({
+					type:"post",
+					url:url.baseUrlPhp+"/api/v1/register.php",
+					data: {
+						"username": $("#username").val(),
+						"email": $("#email").val(),
+						"password": $("#password").val()
+					},
+					dataType:"json",
+					success: function(res){
+								
+						if(res.res_code){
+							
+							if(confirm("注册成功，去登录")){
+								window.location.href = "/html/login.html";
+							}
+						}
+				}
+				
+			})
+				
+				if(flagA&&flagB&&flagC){
+					//取用户名密码邮箱存入cookie
+					let username = $("#username").val(),
+						password = $("#password").val();
+					var obj ={
+						username:username,
+						password:password
+					};
+					$.cookie("user",JSON.stringify(obj));
+					console.log($.cookie("user"));
+					
+			}
+					
+			})
+			
+			//结尾
 	})
 })
+})
 
-//window.onload = function(){
-//	tools.$("#div").onsubmit = function(e){
-//		//绑定提交时间 注意清除默认事件
-//		e = e || window.event;
-//		//获取数据
-//		tools.ajax({//请求数据的封装函数 属性值属性名冒号连接
-//			method:"post",//使用post的获取方式
-//			//路径为php文件  从后台数据获取
-//			url:"api/v1/register.php",
-//			//得到输入框里面的注册框内的内容返回到后台，添加到数据库的表中
-//			params: {
-//				"username":tools.$("#username").value,
-//				"password":tools.$("#password").value,
-//				"email" :tools.$("#email").value
-//			},
-//			//请求数据成功后返回成功的回调函数
-//			cbSucc:function(res){//php文件返回的一个	结果用res接收 属性包含res_code 接下来判断res_code的值为1是就是成功的请求到了数据
-//				//判断返回值为0 还是1 
-//				if(res.res_code){//表示返回值为1 的时候的情况
-//					//表示注册成功可以直接去登陆
-//					if(confirm("注册成功，去登陆")){
-//					//跳转到登陆页面
-//					console.log(res);
-//					window.location.href = "login.html";
-//					}
-//				}
-//	
-//			}
-//			
-//		})
-//		
-//		//清除提交的默认事件
-//		e.preventDefault();
-//		return false;	
-//	}
-//
-//}
-//
+
 
