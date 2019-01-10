@@ -74,11 +74,7 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 					success: function(res){			
 						if(res.res_code){
 							console.log(res);
-						}
-				}
-				
-				})//ajax请求
-				
+							//判断存cookie
 				if(flagA&&flagB&&flagC&&flagD){
 					//取用户名密码邮箱存入cookie
 					let username = $("#username").val(),
@@ -96,7 +92,19 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 			}else{
 				alert("信息不全");
 			}
-					
+				//判断存cookie
+							
+							
+						}else{
+							alert("用户已存在");
+						}
+				}
+				
+				})//ajax请求
+				
+				
+				
+				
 			})
 			
 			//结尾

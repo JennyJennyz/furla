@@ -1,4 +1,4 @@
-define(["jquery"], () => {
+define(["jquery","cookie"], () => {
 	class Header{
 		constructor(){
 			this.init();
@@ -17,6 +17,7 @@ define(["jquery"], () => {
 					this.index();
 					this.liststay();
 					this.top();
+//					this.username();
 			})
 		}
 		
@@ -107,6 +108,13 @@ define(["jquery"], () => {
 			})
 
 		}
+		
+		//存用户名
+//		username(){
+//			var username = JSON.parse($.cookie("user")).username;
+//			$(".usernameshow").html(username);
+//			console.log(username);
+//		};
 
 	//尾部
 	

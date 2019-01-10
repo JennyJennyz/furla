@@ -19,7 +19,11 @@ require(["./requirejs.config"], () => {
           $(".detail-bag-img").attr("src",res.res_body.img);
           $("#price").html("￥"+res.res_body.price);
           $("#title").html(res.res_body.title);
-  	
+          $(".detail-bag-smallimg1").attr("src",res.res_body.img1);
+          $(".detail-bag-smallimg2").attr("src",res.res_body.img2);
+          $(".detail-bag-smallimg3").attr("src",res.res_body.img3);
+          $(".detail-bag-smallimg4").attr("src",res.res_body.img4);       
+  		 		$(".detail-bag-img").attr("src",res.res_body.img1);
          		//存cookie
          		  //添加到购物车事件
   		 
@@ -66,6 +70,14 @@ require(["./requirejs.config"], () => {
 		    						window.location.href = "/html/shopcar.html";
 		  						 
       		   })
+      		   
+      		   //详情页选项卡
+      		   $(".detail-bag-smallimg").on("click",function(){
+      		   	$(this).addClass("bord").parent().siblings().children().removeClass("bord");
+						
+							$(".detail-bag-img").attr("src",$(this).attr("src"));
+      		   })
+      		   
       		   
       		   //微信二维码
       		   $(".wechat").on("mouseenter",function(){

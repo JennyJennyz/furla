@@ -4,21 +4,49 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="/css/count.css">
-		<link rel="stylesheet" type="text/css" href="/libs/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="/libs/font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css"/>
 		<script type="text/javascript" src="/libs/require/require.js" data-main="/js/count.js"></script>
-	
+		
 	</head>
 	<body>
 		<header></header>
 		<main>
-			<table class="table">
- 				<tr>
- 					<th></th>
- 					<th></th>
- 					<th></th>
- 					<th></th>
- 				</tr>
-			</table>
+			<!--购物车内容-->
+			<h2>COUNT</h2>
+			
+			<div id="shopcar">
+			
+			<table class="table" id = "table">
+			<thead>
+			<tr>
+	         	
+				<th>产品</th>
+	            <th>数量</th>
+	            <th>价格</th>	           
+	            <th>小计</th>
+	        </tr>
+			</thead>
+	        <tbody class="content-tbody">
+		      
+		      
+		      
+       		 </tbody>
+      		  <tfoot>
+        	<tr>
+        		<td colspan="6">总价：<span class="money-prev">￥</span><b id="money"></b></td>
+        	</tr>
+        </tfoot>
+  </table>	
+				
+			</div>
+			
+		<!--继续购物按钮-->
+		<div class="lastbtn">
+		<div class="golist"><i class="iconfont icon-gouwudai1"></i><a href="/html/shopcar.html">返回购物袋</a></div>
+		<div class="gocheck"><a href="html/register.html">选择支付方式</a></div>
+		
+		</div>
 		</main>
 		<footer></footer>
 	</body>

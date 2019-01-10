@@ -25,11 +25,29 @@ main{
 }
 
 .detail-img{
-    img{
+    display: flex;
+    justify-content: space-around;
+    .detail-bag-img{
+        margin-left:20px ;
         width: 500px;
         height: 500px;
+        border:1px solid white;
     }
 }
+.bord{
+    border: 1px solid #7b6b43;
+}
+.imgshow{
+    display: block;
+    z-index:10;
+}
+
+.detail-bag-smallimg{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 29px;
+}
+
 .detail-content{
     width: 400px;
      line-height: 2;   
@@ -195,3 +213,4 @@ main{
 .wechatshow{
     display: block;
 }
+

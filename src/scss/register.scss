@@ -65,10 +65,12 @@ form input{
     background: #7b6b43;
     border:none;
     color: white;   
+  
 }
 .checkbox{
-    width: 18px;
-    height: 18px;
+   
+    width: 12px;
+    height: 12px;
     border: none;
     
 }
@@ -114,4 +116,12 @@ form input{
 #div .goregister a{
     font-weight: 600;
     color: #7b6b43;
+}
+
+.register-login{
+    margin-top: 20px;
+    a{
+        font-weight: 600;
+         color: #7b6b43;
+    }
 }
