@@ -1,7 +1,6 @@
 require(["./requirejs.config"], () => {
   require(["jquery", "url","template", "header","footer","cookie"], ($, url,template) => {
   	//连接口
-  	console.log("8885");
     $(function(){
       //获取id
       let arrSearch = location.search.slice(1).split("=");
@@ -17,7 +16,6 @@ require(["./requirejs.config"], () => {
           
           console.log(res);
           //添加到页面
-          console.log(res.res_body.img);
           $(".detail-bag-img").attr("src",res.res_body.img);
           $("#price").html("￥"+res.res_body.price);
           $("#title").html(res.res_body.title);
@@ -38,43 +36,45 @@ require(["./requirejs.config"], () => {
 								num:1
 							};
 							var flag = true;
-					//console.log(obj);				
-			var arr = $.cookie("car")? JSON.parse($.cookie("car")) : [] ;
-						console.log(obj);
-						console.log(arr);
-						
-		
-					
+								
+		var arr = $.cookie("car")? JSON.parse($.cookie("car")) : [] ;
+			
 		for(let i = 0 ;i<arr.length;i++){
-				
-					
 					if(arr[i].id == obj.id){					
-							console.log(arr[i].num);
+						console.log("s");
 							arr[i].num++;
 							flag=false;
+							break;
 					}
+									
+			}		
 					if(flag === true){
 							arr.push(obj); 
-					}				
-				}		
-
-					arr.push(obj); 
+					}
+				
 					$.cookie("car",JSON.stringify(arr));
 					console.log($.cookie("car"));
-
-		
-			
-			$.cookie("car",JSON.stringify(arr));
-			
-			console.log($.cookie("car"));
-			
-				if(confirm("添加购物袋完成,是否去查看我的购物袋？")){
-		    	window.location.href = "/html/shopcar.html";
-		   };
+				
+				
    				 //添加购物车完成
          	//存cookie
          	
       		 })//加购物车
+      		 //跳转页面
+      		   $(".seeshopcar").on("click",function(){
+      		  		
+		    						window.location.href = "/html/shopcar.html";
+		  						 
+      		   })
+      		   
+      		   //微信二维码
+      		   $(".wechat").on("mouseenter",function(){
+      		   		$(".wechati").removeClass("wechatnone").addClass("wechatshow");
+      		   })
+      		    $(".wechat").on("mouseleave",function(){
+      		   		$(".wechati").removeClass("wechatshow").addClass("wechatnone");
+      		   })
+      		 
 					}//sucess
       })//连接口完成
 	

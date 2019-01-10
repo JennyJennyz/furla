@@ -4,7 +4,6 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 	
 
 	$(function(){		
-			console.log("132");
 		//ajax 起
 			$("#login-submit").on("click",function(e){		
 						//ajax请求数据
@@ -24,9 +23,9 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 					if(res.res_code){
 							
 						//是否记住我
-						if($("#remember").checked){
+						if($("#remember:checked")){
 							//把用户名和用户id存cookie
-							console.log("j");
+							console.log("cun");
 							$.cookie(
 								"user", //cookie的名字
 								JSON.stringify({ //cookie的存入值
@@ -37,7 +36,7 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 							);
 						}else{
 							//把用户名和用户id存cookie
-							console.log("c");
+							console.log("meicun");
 							$.cookie(
 								"user", 
 								JSON.stringify({

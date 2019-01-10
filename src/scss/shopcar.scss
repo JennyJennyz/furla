@@ -70,16 +70,65 @@ h2{
 }
 
 .allmoney{
-      font-size: 1.5rem;
+    font-size: 1.5rem;
     color: #7B6B43;
     font-weight: 600;
-     letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
 }
 
 #money{
     font-size: 1.8rem;
     color: #7B6B43;
     font-weight: 600;
-     letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+}
+.money-prev{
+     font-size: 1.8rem;
+    color: #7B6B43;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+.golist{
+    font-size: 12px;
+   i{
+       padding-left: 20px;
+   }        
+   a{ 
+       font-size: .75rem;
+    text-decoration: none!important;
+    color: #616161;
+    font-weight: bold;
+    position: relative;
+    line-height: 1;
+    background-color: transparent;
+    text-transform: none;
+    padding: 0;
+    padding-left: 4px;
+    height: auto;
+    
+    }
+}
+.golist a:hover{
+    color: black;
 }
 
+.lastbtn{
+    display: flex;
+    justify-content: space-between;
+    .gocheck{
+    margin-right: 30px;
+        a{
+    font-size: .75rem;
+    text-decoration: none!important;
+    color: #616161;
+    font-weight: bold;
+    position: relative;
+    line-height: 1;
+    background-color: transparent;
+    text-transform: none;
+    padding: 0;
+    padding-left: 4px;
+    height: auto;
+        }
+    }
+}

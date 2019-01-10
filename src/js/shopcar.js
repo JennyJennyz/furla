@@ -2,7 +2,7 @@
 require(["./requirejs.config"], () => {
 	//引入index需要依赖的模块
 require(["jquery","header","footer","cookie"], ($) => {
-
+	
 	//拼接
 	var carobj = JSON.parse($.cookie("car"));
 	var arr = [];
@@ -92,6 +92,7 @@ require(["jquery","header","footer","cookie"], ($) => {
 //			console.log(arr[index].num);
 			arr[index].num--;
 			//取小计
+			//直接调用shopcarallbug
 			let sumall = 0;
 			for(var key of carobj){
 				
@@ -108,37 +109,38 @@ require(["jquery","header","footer","cookie"], ($) => {
 	
 	//总价结算
 	
-			shopcarall();
+		shopcarall();
 		function shopcarall(){
 			var carobj = JSON.parse($.cookie("car"));
 			let sumall = 0;
 			for(var key of carobj){		
 				sumall += key.num*key.price;		
-			}
+				}
 			console.log(sumall);
 			$("#money").html(sumall);
 			$.cookie("car",JSON.stringify(arr));
 			console.log(arr);
 		}
-		
-
-
-
-	//移除事件
-		var otable = $(".table")[0];
-		otable.onclick = function(e){
+	
+	//删除按钮
+			$(".shop-tr").on("click",".delBtn",function(){
+			var otr = $(this).parent(".zs").parent();
 			
-			var target = e.target || e.srcElement;
-			var  tr = target.parentNode.parentNode;
-						
-			if(target.className==="delBtn"){//删除
-		//	var tr = target.parentNode.parentNode;
-			tr.parentNode.removeChild(tr);
-			$.cookie("car", "", {expires:-1});
-			console.log($.cookie("car"));
-		}
-			
-		}
+			var index = $(this).parent().parent().index();
+			console.log(index);
+			//cookie
+			arr.splice(index,1);
+			otr.remove();
+			$.cookie("car",JSON.stringify(arr));
+			console.log($.cookie("car"));			
+			shopcarall();
+	});
+
+	
+	//删除按钮结束
+	
+	
+
 
 	//点击标题跳转回详情页
 	var jumpDetail = $("tr td")[0];

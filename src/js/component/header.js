@@ -72,7 +72,6 @@ define(["jquery"], () => {
 
 			})
 			$(".stay").on("mouseleave",function(){
-				console.log("leave");
 					$(this).removeClass("navshow");
 
 			})

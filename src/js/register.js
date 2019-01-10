@@ -2,11 +2,9 @@
 require(["./requirejs.config"], () => {
 	//引入index需要依赖的模块
 require(["jquery","url", "header","footer","cookie"], ($,url) => {
-			
+		console.log("text");	
 	$(function(){
-				
-				console.log("2456")
-				
+					
 				var flagA = false;
 				var flagB = false;	
 				var flagC = false;	
@@ -21,7 +19,7 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 							flagA = false;
 						}else{
 							flagA = true;
-							$(".username-wranning").css({display:"none"});
+							$(".username-wranning").removeClass("warnningshow").css({display:"none"});
 						}
 				})
 				//验证密码
@@ -34,7 +32,7 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 							flagB = false;
 						}else{
 							flagB = true;
-							$(".password-wranning").css({display:"none"});
+							$(".password-wranning").removeClass("warnningshow").css({display:"none"});
 						}
 				})
 				
@@ -48,15 +46,15 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 							flagC = false;
 						}else{
 							flagC = true;
-							$(".email-wranning").css({display:"none"});
+							$(".email-wranning").removeClass("warnningshow").css({display:"none"});
 						}
 				})
 				//复选框
-//				if($(".checkbox").cheked){
-//					flagD = true;
-//				}else{
-//					flagD = false;
-//				}
+				if($(".checkbox:checked")){
+					flagD = true;
+				}else{
+					flagD = false;
+				}
 				
 				
 				//提交事件
@@ -73,19 +71,15 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 						"password": $("#password").val()
 					},
 					dataType:"json",
-					success: function(res){
-								
+					success: function(res){			
 						if(res.res_code){
-							
-							if(confirm("注册成功，去登录")){
-								window.location.href = "/html/login.html";
-							}
+							console.log(res);
 						}
 				}
 				
-			})
+				})//ajax请求
 				
-				if(flagA&&flagB&&flagC){
+				if(flagA&&flagB&&flagC&&flagD){
 					//取用户名密码邮箱存入cookie
 					let username = $("#username").val(),
 						password = $("#password").val();
@@ -95,7 +89,12 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 					};
 					$.cookie("user",JSON.stringify(obj));
 					console.log($.cookie("user"));
+					if(confirm("注册成功，去登录")){
+					window.location.href = "/html/login.html";
+							}
 					
+			}else{
+				alert("信息不全");
 			}
 					
 			})
