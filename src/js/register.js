@@ -83,7 +83,9 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 						username:username,
 						password:password
 					};
-					$.cookie("user",JSON.stringify(obj));
+					$.cookie("user",JSON.stringify(obj),{
+						path:"/"
+					});
 					console.log($.cookie("user"));
 					if(confirm("注册成功，去登录")){
 					window.location.href = "/html/login.html";

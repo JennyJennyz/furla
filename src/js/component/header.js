@@ -2,7 +2,7 @@ define(["jquery","cookie"], () => {
 	class Header{
 		constructor(){
 			this.init();
-			
+
 			
 		}
 		init(){
@@ -17,7 +17,7 @@ define(["jquery","cookie"], () => {
 					this.index();
 					this.liststay();
 					this.top();
-//					this.username();
+					this.username();
 			})
 		}
 		
@@ -36,7 +36,7 @@ define(["jquery","cookie"], () => {
 				})
 			
 				
-				
+			
 			}
 		
 		//选项卡
@@ -87,6 +87,7 @@ define(["jquery","cookie"], () => {
 		
 		}
 		
+		//滚动条事件
 		top(){
 			//当滚动条的位置处于距顶部200像素以下时，跳转链接出现，否则消失
 			$(window).on("scroll",function(){
@@ -108,17 +109,22 @@ define(["jquery","cookie"], () => {
 			})
 
 		}
-		
+		//top结束
+			
 		//存用户名
-//		username(){
-//			var username = JSON.parse($.cookie("user")).username;
-//			$(".usernameshow").html(username);
-//			console.log(username);
-//		};
+		username(){
+			var username = JSON.parse($.cookie("user")).name;
+				$(".welcome-username").html(username);
 
+		}
+			
+			
+			
 	//尾部
 	
 	}
 	return new Header();
+		//存用户名
+		
 })
 

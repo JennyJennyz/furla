@@ -25,15 +25,18 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 						//是否记住我
 						if($("#remember:checked")){
 							//把用户名和用户id存cookie
-							console.log("cun");
+							
 							$.cookie(
 								"user", //cookie的名字
 								JSON.stringify({ //cookie的存入值
 									id:res.res_body.id, 
-									name:res.res_body.username
+									name:res.res_body.username,
+									password:res.res_body.password
 								}),
-								{expires:3}
+								{expires:3,
+								path:"/"}//存根路径
 							);
+							console.log($.cookie("user"));
 						}else{
 							//把用户名和用户id存cookie
 							console.log("meicun");
@@ -42,7 +45,8 @@ require(["jquery","url", "header","footer","cookie"], ($,url) => {
 								JSON.stringify({
 									id:res.res_body.id, 
 									name:res.res_body.username
-								})
+								}),
+								{path:"/"}//存根路径
 							);
 						
 						}						
