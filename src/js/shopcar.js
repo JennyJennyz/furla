@@ -139,6 +139,22 @@ require(["jquery","header","footer","cookie"], ($) => {
 	
 	//删除按钮结束
 	
+	//结算确认登录
+	$(".gocheck").on("click",function(){
+			if(!($.cookie("user"))){
+				if(confirm("您还没有登录，请登录")){
+					window.location.href = "/html/login.html";	
+				}
+				
+			}else{
+				window.location.href = "/html/count.html";	
+			}
+		
+	})
+	
+	//结算确认登录时间结束
+	
+	
 	
 
 

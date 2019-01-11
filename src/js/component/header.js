@@ -1,9 +1,9 @@
 define(["jquery","cookie"], () => {
+	
 	class Header{
 		constructor(){
 			this.init();
-
-			
+	
 		}
 		init(){
 			//加载header.html
@@ -18,6 +18,7 @@ define(["jquery","cookie"], () => {
 					this.liststay();
 					this.top();
 					this.username();
+					this.exit();
 			})
 		}
 		
@@ -41,6 +42,7 @@ define(["jquery","cookie"], () => {
 		
 		//选项卡
 		tab(){
+			
 			//woman选项卡
 			$("#nav li:eq(1)").on("mouseenter",function(){	
 				$(".woman-list").addClass("navshow").siblings().removeClass("navshow");
@@ -68,6 +70,7 @@ define(["jquery","cookie"], () => {
 
 		//选项卡停留事件
 		liststay(){
+			
 			$(".stay").on("mouseenter",function(){				
 				$(this).addClass("navshow").siblings().removeClass("navshow");
 
@@ -81,6 +84,7 @@ define(["jquery","cookie"], () => {
 		
 		//点击logo回到主页
 		index(){
+			
 		$("#logo").on("click",function(){
 			location.href = "../index.html";
 		})
@@ -89,6 +93,7 @@ define(["jquery","cookie"], () => {
 		
 		//滚动条事件
 		top(){
+			
 			//当滚动条的位置处于距顶部200像素以下时，跳转链接出现，否则消失
 			$(window).on("scroll",function(){
 				var scrollTop = $(window).scrollTop();//scrollTop()垂直位置的
@@ -113,12 +118,27 @@ define(["jquery","cookie"], () => {
 			
 		//存用户名
 		username(){
-			var username = JSON.parse($.cookie("user")).name;
-				$(".welcome-username").html(username);
-
+			if($.cookie("user")){
+				$(".welcome-username").html(JSON.parse($.cookie("user")).name);
+			}else{
+				$(".welcome").html("");
+			}
+								
 		}
 			
-			
+		//退出登录删除cookie
+		exit(){
+					
+			$(".exit").on("click",function(){
+				if(confirm("确定要退出登录吗？")){
+				$.cookie("user","", {expires:-1,path:"/"});
+				window.location.href = "/html/login.html";
+				
+				}
+			})
+		
+		}
+	
 			
 	//尾部
 	

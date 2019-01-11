@@ -67,8 +67,8 @@ content{
     text-decoration: underline;
 }
 .header-right{
-    
-}
+    box-sizing: border-box;
+}   
 
 .header-right-list li{
     float: left;
@@ -223,10 +223,26 @@ content{
         }
    
 }
-#totop{cursor: pointer;display: none;position: fixed;bottom: 20px;right: 20px;width: 40px;height: 40px;background: #ccc;border-radius: 50%;color: #fff;font-size: 28px;font-weight: 900;text-align: center;line-height: 40px;}
+#totop{cursor: pointer;display: none;position: fixed;bottom: 20px;right: 20px;width: 40px;height: 40px;background: #ccc;border-radius: 50%;color: #fff;font-size: 28px;font-weight: 900;text-align: center;
+line-height:40px;}
 
 .welcome{
     font-size: 14px!important;
     color: #82734e!important;
+    margin-right: 10px;
+    margin-top: 3px;
     
+}
+.welcome-username{
+    text-decoration: underline;
+}
+.exit{
+      font-size: 14px!important;
+    color: #82734e!important;
+    padding-left: 10px;
+    
+}
+.exit:hover{
+    color: black!important;
+    text-decoration: underline;
 }
