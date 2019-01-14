@@ -58,8 +58,8 @@ require(["./requirejs.config"], () => {
 				
 					$.cookie("car",JSON.stringify(arr));
 					console.log($.cookie("car"));
-				
-				
+					
+					alert("添加购物车成功");
    				 //添加购物车完成
          	//存cookie
          	
